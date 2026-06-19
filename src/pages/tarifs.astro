@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import config from '../data/config.json';
+
+const title = `Tarif Pose & Réfection Toiture Bouches-du-Rhône (13) | Prix Couverture 2026`;
+const description = `Consultez le guide complet des tarifs de réfection de toiture, pose de tuiles canal, démoussage et zinguerie dans les Bouches-du-Rhône (13). Devis RGE gratuits.`;
+---
+
+<Layout title={title} description={description}>
+  <SchemaMarkup
+    slot="head"
+    pageUrl={Astro.url.href}
+    pageTitle={title}
+    pageDescription={description}
+    breadcrumbItems={[
+      { label: "Accueil", href: "/" },
+      { label: "Tarifs Couverture" }
+    ]}
+  />
+
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Tarifs Bouches-du-Rhône (13)", href: "/tarifs/" }
+  ]} />
+
+  <section class="static-page-section" style="background-color: var(--bg);">
+    <div class="container">
+      <div class="two-column-layout">
+        
+        <!-- Main Content -->
+        <div class="static-main-content">
+          <h1>Grille des Prix de Toiture dans les Bouches-du-Rhône — 2026</h1>
+          
+          <p class="lettrine">V</p>ous envisagez de réaliser des travaux de réfection de toiture, de nettoyage ou d'isolation de vos combles à Marseille, Aix-en-Provence, Aubagne, Martigues, Istres ou Salon-de-Provence ? Le budget dépend du type de couverture (tuile canal provençale traditionnelle, tuile mécanique, plaques sous tuiles, toit terrasse), de la surface et de l'état de la charpente en bois de votre logement (13).
+
+          <h2>Grille tarifaire moyenne (Fourniture &amp; Pose)</h2>
+          <p>
+            Voici les tarifs moyens TTC observés en 2026 dans les Bouches-du-Rhône, comprenant les matériaux et l'installation complète par un couvreur certifié RGE :
+          </p>
+
+          <div class="table-scroll-wrapper" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); margin: 25px 0;">
+            <table class="data-table" style="width: 100%; margin: 0;">
+              <thead>
+                <tr>
+                  <th>Nature des Travaux</th>
+                  <th>Spécifications techniques</th>
+                  <th style="text-align: right;">Prix Moyen Posé TTC *</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: 600;">Réfection complète tuiles canal</td>
+                  <td style="color: var(--text-muted);">Dépose + repose + écran HPV + liteaux</td>
+                  <td class="price" style="text-align: right;">120 – 180 € / m²</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Réfection tuiles mécaniques</td>
+                  <td style="color: var(--text-muted);">Dépose + repose + liteaux récents</td>
+                  <td class="price" style="text-align: right;">100 – 150 € / m²</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Démoussage + Hydrofuge</td>
+                  <td style="color: var(--text-muted);">Nettoyage basse pression + algicide + imperméabilisation</td>
+                  <td class="price" style="text-align: right;">15 – 35 € / m²</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Réparation fuite ponctuelle</td>
+                  <td style="color: var(--text-muted);">Recherche de fuite + colmatage + tuiles de remplacement</td>
+                  <td class="price" style="text-align: right;">350 – 1 200 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Remplacement faîtage</td>
+                  <td style="color: var(--text-muted);">Faîtières scellées à la chaux ou closoir ventilé à sec</td>
+                  <td class="price" style="text-align: right;">40 – 80 € / ml</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Zinguerie (gouttières &amp; descentes)</td>
+                  <td style="color: var(--text-muted);">Zinc ou alu laqué, raccords de rives inclus</td>
+                  <td class="price" style="text-align: right;">50 – 90 € / ml</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Isolation sous toiture (Sarking)</td>
+                  <td style="color: var(--text-muted);">Panneaux isolants rigides + pare-vapeur thermique</td>
+                  <td class="price" style="text-align: right;">80 – 150 € / m²</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Charpente traditionnelle</td>
+                  <td style="color: var(--text-muted);">Réparation ou renforcement de chevrons / pannes</td>
+                  <td class="price" style="text-align: right;">60 – 120 € / m²</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Étanchéité toit terrasse</td>
+                  <td style="color: var(--text-muted);">Membrane élastomère EPDM ou étanchéité bitume</td>
+                  <td class="price" style="text-align: right;">50 – 100 € / m²</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-muted); text-align: center; margin-top: -10px;">
+            * Estimations TTC fourniture et pose comprises pour des formats standards. Les majorations liées à des contraintes ABF (Bâtiments de France) ou à des accès complexes peuvent faire varier ces devis.
+          </p>
+
+          <h2>Tarifs horaires des couvreurs dans le 13</h2>
+          <p>
+            Le tarif horaire moyen pour un couvreur-zingueur qualifié dans les Bouches-du-Rhône s'établit entre 45 € et 75 € HT. Le coût total de la main-d'œuvre dépend de la difficulté d'accès (hauteur, échafaudage suspendu, accès étroit) et du type de toit.
+          </p>
+
+          <h2>Facteurs géographiques modifiant les devis dans les Bouches-du-Rhône</h2>
+          <p>
+            Dans notre département 13, plusieurs spécificités influencent le montant de votre facture finale :
+          </p>
+          <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; margin-bottom: 20px;">
+            <li><strong>L'exposition au vent Mistral :</strong> Autour d'Arles et de la vallée du Rhône, toutes les tuiles de couvert doivent être scellées ou crochetées avec des crochets anti-tempête, ce qui augmente le coût du matériel de fixation.</li>
+            <li><strong>Les prescriptions ABF :</strong> À Aix-en-Provence (centre historique) ou Arles (à proximité des arènes), l'ABF exige l'utilisation de tuiles canal en terre cuite de réemploi ou à aspect vieilli spécifique, ce qui peut majorer le budget matériaux de 20% à 30%.</li>
+            <li><strong>La logistique en copropriété (Marseille) :</strong> Les chantiers en centre-ville marseillais (immeubles de 3 à 5 étages) requièrent l'utilisation de monte-matériaux, d'échafaudages de voirie réglementés ou de grues, ce qui engendre des frais de logistique et d'autorisation administrative de voirie non négligeables.</li>
+          </ul>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="static-sidebar">
+          <div class="sidebar-widget bg-slate-gradient">
+            <h3>Demande de Devis RGE</h3>
+            <p>
+              Prêt à lancer votre projet ? Obtenez 3 devis comparatifs gratuits d'artisans couvreurs RGE proches de votre commune dans le 13.
+            </p>
+            <a href="/devis/" class="sidebar-cta-tuile">Obtenir mes devis</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3>Exemple de Devis Réfection</h3>
+            <p style="font-size: 13px; line-height: 1.45; margin-bottom: 8px;">
+              Remplacement complet de 100 m² de toiture en tuiles canal sur une maison à Salon-de-Provence :
+            </p>
+            <ul style="font-size: 12px; margin: 0 0 10px 15px; color: var(--text-muted); list-style-type: square; display: flex; flex-direction: column; gap: 4px; padding: 0;">
+              <li>Dépose et évacuation décharge : 2 000€</li>
+              <li>Pose écran sous-toiture HPV : 1 500€</li>
+              <li>Fourniture &amp; pose tuiles canal crochetées : 11 000€</li>
+              <li>Zinguerie et finitions d'égout : 1 500€</li>
+              <li>TVA réduite (10% rénovation) : 1 600€</li>
+              <li><strong>Total Devis TTC : 17 600€</strong></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget" style="border-left: 4px solid var(--secondary);">
+            <h3>Ressources Utiles</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; padding: 0;">
+              <li><a href="/guide-tuiles-provence/">&rarr; Guide Tuiles Canal</a></li>
+              <li><a href="/urgence-fuite-toiture/">&rarr; Dépannage fuite 24h</a></li>
+              <li><a href="/devis/">&rarr; Demande de Devis Gratuit</a></li>
+              <li><a href="/guides/prix-refection-toiture-marseille-13-2026/">&rarr; Budget Réfection 13</a></li>
+              <li><a href="/guides/mistral-toiture-securiser-tuiles-rafales-provence/">&rarr; Sécuriser face au vent</a></li>
+              <li><a href="/communes/">&rarr; Couvreurs par Ville (13)</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import config from '../data/config.json';
+
+const title = `Guide Tuiles Canal & Romanes en Provence (13) | Règles de l'art DTU 40.21`;
+const description = `Découvrez comment choisir, poser et sécuriser vos tuiles canal et romanes face au Mistral dans les Bouches-du-Rhône selon le PLU et les normes ABF.`;
+---
+
+<Layout title={title} description={description}>
+  <SchemaMarkup
+    slot="head"
+    pageUrl={Astro.url.href}
+    pageTitle={title}
+    pageDescription={description}
+    breadcrumbItems={[
+      { label: "Accueil", href: "/" },
+      { label: "Guide Tuiles Provence" }
+    ]}
+  />
+
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Guide Tuiles Provence", href: "/guide-tuiles-provence/" }
+  ]} />
+
+  <section class="static-page-section" style="background-color: var(--bg);">
+    <div class="container">
+      <div class="two-column-layout">
+        
+        <!-- Main Content -->
+        <div class="static-main-content">
+          <h1>Guide Tuiles Canal Provençales &amp; Romanes dans le 13</h1>
+          
+          <p class="lettrine">L</p>a toiture provençale est reconnaissable entre mille par ses teintes chaudes terre cuite ocre et sa couverture en tuiles canal. Dans les Bouches-du-Rhône (13), du centre historique d'Aix-en-Provence aux bastides des Alpilles et mas de Camargue, le choix et la pose des tuiles doivent obéir à des contraintes climatiques spécifiques (résistance au Mistral et aux orages) et à des prescriptions d'urbanisme strictes fixées par les PLU et les Architectes des Bâtiments de France (ABF).
+
+          <h2>1. Tuiles canal traditionnelles vs Tuiles mécaniques</h2>
+          <p>
+            Pour la couverture de votre toit dans le 13, plusieurs modèles de tuiles en terre cuite sont envisageables :
+          </p>
+          <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; margin-bottom: 20px;">
+            <li><strong>La tuile canal traditionnelle :</strong> Posée par paire (la tuile de courant en dessous, la tuile de couvert au-dessus), elle est l'essence même du charme provençal. Elle assure une excellente évacuation de l'eau et une ventilation optimale de la sous-face en climat sec.</li>
+            <li><strong>La tuile mécanique imitation canal :</strong> Dotée de systèmes d'emboîtement, elle est plus étanche à l'air et à l'eau, plus stable face aux fortes rafales de vent, et nécessite moins de temps de pose, réduisant la facture finale de 15% à 20%.</li>
+            <li><strong>Les Plaques Sous Tuiles (PST) :</strong> Cette technique consiste à fixer des plaques ondulées sur la charpente pour assurer l'étanchéité à 100%, puis à sceller par-dessus des tuiles canal de récupération. C'est la solution de sécurité idéale face aux orages méditerranéens violents.</li>
+          </ul>
+
+          <h2>2. Les règles de pose du DTU 40.21 face au Mistral</h2>
+          <p>
+            Le Mistral souffle régulièrement à plus de 110 km/h dans les Bouches-du-Rhône, créant des forces d'arrachement sur les toitures. La pose selon le DTU 40.21 impose donc des mesures de fixation strictes :
+          </p>
+          <blockquote style="border-left: 4px solid var(--secondary); background-color: var(--primary-light); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; font-style: italic;">
+            <p><strong>La règle de fixation :</strong> Toutes les tuiles de rive, d'égout et de faîtage doivent être scellées au mortier de chaux naturelle ou fixées mécaniquement à l'aide de crochets inox. De même, sur le corps du toit, une tuile de couvert sur deux (en zone abritée) ou la totalité (en zone exposée) doit être fixée mécaniquement pour résister aux dépressions du vent.</p>
+          </blockquote>
+
+          <h2>3. L'importance de la ventilation et de l'écran sous-toiture</h2>
+          <p>
+            En Provence, la toiture accumule de fortes calories durant la journée. Le DTU impose une ventilation efficace de la sous-face des tuiles (à l'aide de chatières de ventilation ou d'un closoir ventilé au faîtage). Cette lame d'air évite la condensation d'humidité et réduit la température sous le toit en été. De plus, la pose d'un écran sous-toiture HPV (Hautement Perméable à la Vapeur d'eau) protège la charpente de l'eau de pluie rabattue par le vent.
+          </p>
+
+          <h2>Tableau des types de tuiles autorisés en Bouches-du-Rhône (13)</h2>
+          <div class="table-scroll-wrapper" style="border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); margin: 25px 0;">
+            <table class="data-table" style="width: 100%; margin: 0;">
+              <thead>
+                <tr>
+                  <th>Type de tuile</th>
+                  <th>Spécification technique</th>
+                  <th>Résistance au vent (1-3)</th>
+                  <th>Usage conseillé / Zone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: 600;">Tuile Canal Terre Cuite</td>
+                  <td style="font-weight: 700; color: var(--primary);">Pose par glissement traditionnelle</td>
+                  <td>★★☆ (Nécessite crochetage)</td>
+                  <td>Bâtiments classés ABF, bastides de charme (Aix, Alpilles)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">Tuile Mécanique (Marseillaise)</td>
+                  <td>À emboîtement, profil plat ou galbé</td>
+                  <td>★★★ (Stable par emboîtement)</td>
+                  <td>Pavillons récents, copropriétés, budget optimisé (Marseille, Martigues)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 600;">PST + Tuiles de récupération</td>
+                  <td>Plaques ondulées étanches + tuiles canal scellées</td>
+                  <td>★★★ (Sécurité absolue)</td>
+                  <td>Rénovation de mas de Camargue, zones très exposées au Mistral</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="static-sidebar">
+          <div class="sidebar-widget bg-slate-gradient">
+            <h3>Comparer les couvreurs</h3>
+            <p>
+              La réfection de toiture en tuiles canal avec isolation thermique est éligible aux primes CEE et MaPrimeRénov' 2026. Comparez 3 offres gratuites.
+            </p>
+            <a href="/devis/" class="sidebar-cta-tuile">Demander mes devis</a>
+          </div>
+
+          <div class="sidebar-widget" style="border-left: 4px solid var(--secondary);">
+            <h3>Menu Technique</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; padding: 0;">
+              <li><a href="/tarifs/">&rarr; Tarifs Toiture 2026</a></li>
+              <li><a href="/devis/">&rarr; Demande de Devis RGE</a></li>
+              <li><a href="/urgence-fuite-toiture/">&rarr; Dépannage fuite 24h</a></li>
+              <li><a href="/guides/prix-refection-toiture-marseille-13-2026/">&rarr; Grille Budgets 13</a></li>
+              <li><a href="/guides/mistral-toiture-securiser-tuiles-rafales-provence/">&rarr; Sécuriser contre le vent</a></li>
+              <li><a href="/communes/">&rarr; Couvreurs par Ville (13)</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</Layout>
