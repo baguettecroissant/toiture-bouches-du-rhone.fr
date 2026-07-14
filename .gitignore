@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # npm cache
 npm-cache/
+
+# wrangler cache
+.wrangler/
